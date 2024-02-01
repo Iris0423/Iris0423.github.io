@@ -1,75 +1,78 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resume</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-        }
+    <!-- Declare the document type -->
+    <meta charset="utf-8">
+    
+    <!-- Add title to the webpage -->
+    <title>John Doe's Resume</title>
 
-        header,
-        footer {
-            background-color: #f4f4f4;
-            padding: 2rem;
-            text-align: center;
-        }
+    <!-- Move external resource references to the head section -->
+    <link rel="stylesheet" href="styles.css">
 
-        main {
-            padding: 2rem;
-        }
-
-        h1,
-        h2 {
-            color: #575757;
-        }
-
-        .section {
-            border-bottom: 1px solid #ddd;
-            padding: 2rem 0;
-        }
-    </style>
+    <!-- Style guide suggests using double quotes instead of single ones -->
 </head>
 
 <body>
+    <!-- Header section -->
     <header>
         <h1>John Doe's Resume</h1>
     </header>
 
+    <!-- Main content area -->
     <main>
-        <div class="section introduction">
+        <!-- Introduction section -->
+        <section id="introduction">
             <h2>Introduction</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque et cursus quam.</p>
-        </div>
-
-        <div class="section interests-projects">
-            <h2>Interests & Projects</h2>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque et cursus quam.
+            </p>
+        </section>
+        
+        <!-- My Interest &amp; Projects section -->
+        <section id="interests-and-projects">
+            <h2>Interests &amp; Projects</h2>
             <ul>
-                <li><strong>Web Development:</strong> I enjoy building websites using modern technologies like HTML5, CSS3, JavaScript, React, Node.js, etc.</li>
-                <li><strong>Machine Learning:</strong> Exploring the world of AI with Python libraries such as TensorFlow, Keras, PyTorch, Scikit-learn, etc.</li>
-                <li><strong>Project 1:</strong> Lorem ipsum dolor sit amet...</li>
-                <li><strong>Project 2:</strong> Consectetur adipiscing elit...</li>
+                <li>
+                    <strong>Web Development:</strong> Enjoy working with HTML5, CSS3, JavaScript, React, Node.js, etc.
+                </li>
+                <li>
+                    <strong>Machine Learning:</strong> Passionate about exploring AI using Python libraries like TensorFlow, Keras, PyTorch, Scikit-learn, etc.
+                </li>
+                <li>
+                    <strong>Project 1:</strong> Description for project 1...
+                </li>
+                <li>
+                    <strong>Project 2:</strong> Description for project 2...
+                </li>
             </ul>
-        </div>
+        </section>
 
-        <div class="section contacts">
+        <!-- Contacts section -->
+        <section id="contacts">
             <h2>Contacts</h2>
+            <address>
+                Email: <a href="mailto:john.doe@example.com">john.doe@example.com</a>
+            </address>
             <ul>
-                <li><strong>Email:</strong> john.doe@example.com</li>
-                <li><strong>LinkedIn:</strong> linkedin.com/in/johndoe</li>
-                <li><strong>Github:</strong> github.com/johndoe</li>
+                <li>
+                    LinkedIn: <a href="linkedin.com/in/johndoe" target="_blank" rel="noreferrer">linkedin.com/in/johndoe</a>
+                </li>
+                <li>
+                    Github: <a href="github.com/johndoe" target="_blank" rel="noreferrer">github.com/johndoe</a>
+                </li>
             </ul>
-        </div>
+        </section>
     </main>
 
+    <!-- Footer section -->
     <footer>
-        Copyright © 2023 John Doe
+        &copy; <?php echo date('Y'); ?> John Doe
     </footer>
+
+    <!-- Scripts and other JS resources go right before closing body tag -->
+    <script src="scripts.js"></script>
 </body>
 
 </html>
