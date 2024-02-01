@@ -1,78 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <!-- Declare the document type -->
-    <meta charset="utf-8">
-    
-    <!-- Add title to the webpage -->
-    <title>John Doe's Resume</title>
-
-    <!-- Move external resource references to the head section -->
-    <link rel="stylesheet" href="styles.css">
-
-    <!-- Style guide suggests using double quotes instead of single ones -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joe Doe - Full Stack Developer</title>
+    <!-- Add your CSS file here -->
+    <style>/* Add custom styles */</style>
 </head>
-
 <body>
-    <!-- Header section -->
-    <header>
-        <h1>John Doe's Resume</h1>
+    <header class="site-header">
+        <div class="container">
+            <img src="joe_doe_logo.png" alt="Joe Doe Logo" class="logo">
+            <nav>
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </div>
     </header>
 
-    <!-- Main content area -->
-    <main>
-        <!-- Introduction section -->
-        <section id="introduction">
-            <h2>Introduction</h2>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque et cursus quam.
-            </p>
-        </section>
-        
-        <!-- My Interest &amp; Projects section -->
-        <section id="interests-and-projects">
-            <h2>Interests &amp; Projects</h2>
-            <ul>
-                <li>
-                    <strong>Web Development:</strong> Enjoy working with HTML5, CSS3, JavaScript, React, Node.js, etc.
-                </li>
-                <li>
-                    <strong>Machine Learning:</strong> Passionate about exploring AI using Python libraries like TensorFlow, Keras, PyTorch, Scikit-learn, etc.
-                </li>
-                <li>
-                    <strong>Project 1:</strong> Description for project 1...
-                </li>
-                <li>
-                    <strong>Project 2:</strong> Description for project 2...
-                </li>
-            </ul>
-        </section>
+    <section id="hero" class="hero">
+        <h1>Hi, I'm Joe Doe</h1>
+        <p>A Passionate Full Stack Developer</p>
+        <button><a href="#about">Get To Know Me</a></button>
+    </section>
 
-        <!-- Contacts section -->
-        <section id="contacts">
-            <h2>Contacts</h2>
-            <address>
-                Email: <a href="mailto:john.doe@example.com">john.doe@example.com</a>
-            </address>
-            <ul>
-                <li>
-                    LinkedIn: <a href="linkedin.com/in/johndoe" target="_blank" rel="noreferrer">linkedin.com/in/johndoe</a>
-                </li>
-                <li>
-                    Github: <a href="github.com/johndoe" target="_blank" rel="noreferrer">github.com/johndoe</a>
-                </li>
-            </ul>
-        </section>
-    </main>
+    <section id="about" class="section about">
+        <h2>Who Is Joe Doe?</h2>
+        <p>With over five years of professional experience under his belt, Joe has worked with multiple development stacks and tools. He enjoys solving complex problems and working on projects that challenge him.</p>
+    </section>
 
-    <!-- Footer section -->
-    <footer>
-        &copy; <?php echo date('Y'); ?> John Doe
+    <section id="skills" class="section skills">
+        <h2>Skills Overview</h2>
+        <ul>
+            <li>Frontend: HTML, CSS, JS, Vue.js, React.js</li>
+            <li>Backend: Node.js, Django, Flask, Ruby on Rails</li>
+            <li>Databases: PostgreSQL, MongoDB, Redis</li>
+            <li>DevOps: AWS, Azure, Google Cloud Platform</li>
+        </ul>
+    </section>
+
+    <section id="projects" class="section projects">
+        <h2>Featured Projects</h2>
+        <article class="project">
+            <h3>Project Name #1</h3>
+            <p>Short project description...</p>
+        </article>
+        <article class="project">
+            <h3>Project Name #2</h3>
+            <p>Short project description...</p>
+        </article>
+    </section>
+
+    <section id="contact" class="section contact">
+        <h2>Let's Talk</h2>
+        <form action="/submit_message" method="POST">
+            <input type="hidden" name="_token" value="{{ csrf_token() }}">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name">
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email">
+
+            <label for="message">Message:</label>
+
+            <textarea rows="4" cols="50" id="message" name="message"></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <footer class="site-footer">
+        <p>&copy; {{ current_year }} | Designed & Developed by Joe Doe</p>
     </footer>
-
-    <!-- Scripts and other JS resources go right before closing body tag -->
-    <script src="scripts.js"></script>
 </body>
-
 </html>
